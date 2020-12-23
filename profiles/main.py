@@ -3,7 +3,7 @@ import os
 
 
 def send_msg_to_me(msg):
-    CHAT_ID = os.environ['CHAT_ID']
+    CHAT_ID = os.environ['TG_CHAT_ID']
     TG_BOT_TOKEN = os.environ['TG_BOT_TOKEN']
     BOT_MSG_URL = 'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'.format(BOT_TOKEN=TG_BOT_TOKEN)
 
