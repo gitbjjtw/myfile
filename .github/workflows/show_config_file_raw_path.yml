@@ -6,9 +6,8 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    path:
+      - 'profiles/surge'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,8 +25,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: show raw config url
+        run: ls -l profiles/surge | grep -v my.list | awk 'NR >1  {print "https://raw.githubusercontent.com/gitbjjtw/myfile/main/profiles/surge/"$NF}'
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
