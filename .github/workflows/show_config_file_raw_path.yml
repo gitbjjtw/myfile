@@ -23,12 +23,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: show raw config url
-        run: ls -l profiles/surge | grep -v my.list | awk 'NR >1  {print "https://raw.githubusercontent.com/gitbjjtw/myfile/main/profiles/surge/"$NF}'
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: install python and requirements
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          apt install python python-pip -y
+          python -m pip install requests
+
+      - name: show raw config url
+        run: ls -l profiles/surge | grep -v my.list | awk 'NR >1  {print "https://raw.githubusercontent.com/gitbjjtw/myfile/main/profiles/surge/"$NF}' > tmp.txt
+
+      - name: send msg
+        run: python profiles/main.py
