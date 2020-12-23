@@ -11,6 +11,10 @@ def send_msg_to_me(msg):
 
 
 if __name__ == '__main__':
+    send_msg_to_me('refresh proxy config file')
+
     with open('tmp.txt') as f:
         for l in f:
             send_msg_to_me(l.strip())
+
+    send_msg_to_me('done')
