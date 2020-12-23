@@ -25,7 +25,7 @@ jobs:
 
       - name: install python and requirements
         run: |
-          apt install python python-pip -y
+          sudo apt install python python-pip -y
           python -m pip install requests
 
       - name: show raw config url
