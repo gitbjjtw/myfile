@@ -32,4 +32,7 @@ jobs:
         run: ls -l profiles/surge | grep -v my.list | awk 'NR >1  {print "https://raw.githubusercontent.com/gitbjjtw/myfile/main/profiles/surge/"$NF}' > tmp.txt
 
       - name: send msg
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: python profiles/main.py
