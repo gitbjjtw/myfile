@@ -1,4 +1,4 @@
-import reqeusts
+import requests
 import os
 
 
