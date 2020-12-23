@@ -8,7 +8,6 @@ def send_msg_to_me(msg):
     BOT_MSG_URL = 'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'.format(BOT_TOKEN=TG_BOT_TOKEN)
 
     r = requests.post(BOT_MSG_URL, data={'chat_id': CHAT_ID, 'text': msg})
-    return r
 
 
 if __name__ == '__main__':
