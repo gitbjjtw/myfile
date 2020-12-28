@@ -16,5 +16,5 @@ DOMAIN-SUFFIX,demdex.net
 DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,youtube.com
 PROCESS-NAME,git-remote-http
-
