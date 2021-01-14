@@ -4,3 +4,5 @@ DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,swcdn.apple.com
+DOMAIN,officecdn-microsoft-com.akamaized.net
+PROCESS-NAME,/Applications/Docker.app/Contents/MacOS/Docker
